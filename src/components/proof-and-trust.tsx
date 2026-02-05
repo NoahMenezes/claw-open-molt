@@ -23,7 +23,7 @@ export default function ProofAndTrust() {
       ]
     },
     {
-      title: "What you dont need to worry about..",
+      title: "What you don't need to worry about..",
       accent: "text-muted-foreground",
       borderColor: "border-muted-foreground",
       icon: X,
@@ -62,17 +62,17 @@ export default function ProofAndTrust() {
 
             <div className="space-y-6">
                 <div className="flex p-1 bg-muted rounded-full">
-                    {tabs.map((tab, idx) => (
+                    {tabs.map((tab, _idx) => (
                         <button
-                            key={idx}
-                            onClick={() => setActiveTab(idx)}
+                            key={_idx}
+                            onClick={() => setActiveTab(_idx)}
                             className={cn(
                                 "flex-1 py-2 text-sm font-medium rounded-full transition-all duration-300",
-                                activeTab === idx ? "bg-background shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
+                                activeTab === _idx ? "bg-background shadow-sm text-foreground" : "text-muted-foreground hover:text-foreground"
                             )}
                         >
                            <span className="hidden sm:inline">{tab.title.split(' ')[0]}...</span>
-                           <span className="sm:hidden">{idx + 1}</span>
+                           <span className="sm:hidden">{_idx + 1}</span>
                         </button>
                     ))}
                 </div>

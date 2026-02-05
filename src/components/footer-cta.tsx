@@ -13,7 +13,7 @@ export default function FooterCTA() {
                 <Link href="https://wa.me/9145336569?text=Hi%20there!%20I%27m%20interested%20in%20your%20services.">Book a Call</Link>
             </Button>
             <p className="text-muted-foreground text-lg">
-                Tell us what you want it to do. We’ll recommend the setup and share a quote.
+                Tell us what you want it to do. We{"'"}ll recommend the setup and share a quote.
             </p>
         </div>
       </div>

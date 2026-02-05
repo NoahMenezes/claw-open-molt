@@ -7,8 +7,9 @@ import { ChevronRight } from 'lucide-react'
 import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 
+const words = ['Moltbot', 'OpenClaw', 'Clawdbot']
+
 export default function HeroSection() {
-    const words = ['Moltbot', 'OpenClaw', 'Clawdbot']
     const [index, setIndex] = useState(0)
 
     useEffect(() => {

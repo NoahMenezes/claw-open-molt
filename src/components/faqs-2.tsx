@@ -26,7 +26,7 @@ export default async function FAQsTwo() {
                         type="single"
                         collapsible
                         className="bg-card ring-muted w-full rounded-2xl border px-8 py-3 shadow-sm ring-4 dark:ring-0">
-                        {faqs.map((item: Faq, index: number) => (
+                        {faqs.map((item: Faq, _index: number) => (
                             <AccordionItem
                                 key={item.id}
                                 value={String(item.id)}
@@ -41,7 +41,7 @@ export default async function FAQsTwo() {
 
 
                     <p className="text-muted-foreground mt-6 px-8">
-                        Can't find what you're looking for? Contact our{' '}
+                        Can{"'"}t find what you{"'"}re looking for? Contact our{' '}
                         <Link
                             href="#"
                             className="text-primary font-medium hover:underline">
