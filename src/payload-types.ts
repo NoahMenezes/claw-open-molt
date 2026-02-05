@@ -174,7 +174,7 @@ export interface Testimonial {
   name: string;
   role: string;
   company: string;
-  avatar: string;
+  avatar: number | Media;
   quote: string;
   updatedAt: string;
   createdAt: string;

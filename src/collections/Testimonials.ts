@@ -28,8 +28,8 @@ export const Testimonials: CollectionConfig = {
     },
     {
       name: 'avatar',
-      type: 'text',
-      label: 'Avatar URL',
+      type: 'upload',
+      relationTo: 'media',
       required: true,
     },
     {
