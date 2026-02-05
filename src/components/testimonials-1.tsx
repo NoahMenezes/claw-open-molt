@@ -19,7 +19,7 @@ export default async function Testimonials() {
       <div className="mx-auto max-w-2xl px-6">
         <div className="space-y-4">
           <h2 className="text-balance font-serif text-4xl font-medium">
-            What Our Customers Say
+            Clients have to say
           </h2>
           <p className="text-muted-foreground text-balance">
             Hear from the teams and individuals who have transformed their workflow with our platform.
@@ -29,7 +29,7 @@ export default async function Testimonials() {
         <div className="@xl:grid-cols-2 mt-12 grid gap-3">
           {testimonials.map((testimonial: Testimonial) => {
             const avatar =
-              testimonial.avatar && typeof testimonial.avatar !== 'string'
+              testimonial.avatar && typeof testimonial.avatar === 'object' && 'url' in testimonial.avatar
                 ? testimonial.avatar
                 : null
 
