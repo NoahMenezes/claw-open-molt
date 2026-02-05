@@ -69,8 +69,8 @@ export interface Config {
   collections: {
     users: User;
     media: Media;
-    testimonials: Testimonial;
-    faqs: Faq;
+    testimonials_v2: TestimonialsV2;
+    faqs_v2: FaqsV2;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
     'payload-preferences': PayloadPreference;
@@ -80,8 +80,8 @@ export interface Config {
   collectionsSelect: {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
-    testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
-    faqs: FaqsSelect<false> | FaqsSelect<true>;
+    testimonials_v2: TestimonialsV2Select<false> | TestimonialsV2Select<true>;
+    faqs_v2: FaqsV2Select<false> | FaqsV2Select<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
     'payload-preferences': PayloadPreferencesSelect<false> | PayloadPreferencesSelect<true>;
@@ -166,26 +166,54 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "testimonials".
+ * via the `definition` "testimonials_v2".
  */
-export interface Testimonial {
+export interface TestimonialsV2 {
   id: number;
   name: string;
   role: string;
   company: string;
   avatar: number | Media;
-  quote: string;
+  quote: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
   updatedAt: string;
   createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "faqs".
+ * via the `definition` "faqs_v2".
  */
-export interface Faq {
+export interface FaqsV2 {
   id: number;
   question: string;
-  answer: string;
+  answer: {
+    root: {
+      type: string;
+      children: {
+        type: any;
+        version: number;
+        [k: string]: unknown;
+      }[];
+      direction: ('ltr' | 'rtl') | null;
+      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+      indent: number;
+      version: number;
+    };
+    [k: string]: unknown;
+  };
   updatedAt: string;
   createdAt: string;
 }
@@ -222,12 +250,12 @@ export interface PayloadLockedDocument {
         value: number | Media;
       } | null)
     | ({
-        relationTo: 'testimonials';
-        value: number | Testimonial;
+        relationTo: 'testimonials_v2';
+        value: number | TestimonialsV2;
       } | null)
     | ({
-        relationTo: 'faqs';
-        value: number | Faq;
+        relationTo: 'faqs_v2';
+        value: number | FaqsV2;
       } | null);
   globalSlug?: string | null;
   user: {
@@ -314,9 +342,9 @@ export interface MediaSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "testimonials_select".
+ * via the `definition` "testimonials_v2_select".
  */
-export interface TestimonialsSelect<T extends boolean = true> {
+export interface TestimonialsV2Select<T extends boolean = true> {
   name?: T;
   role?: T;
   company?: T;
@@ -327,9 +355,9 @@ export interface TestimonialsSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "faqs_select".
+ * via the `definition` "faqs_v2_select".
  */
-export interface FaqsSelect<T extends boolean = true> {
+export interface FaqsV2Select<T extends boolean = true> {
   question?: T;
   answer?: T;
   updatedAt?: T;

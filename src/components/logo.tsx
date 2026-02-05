@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 
 export const Logo = ({ className }: { className?: string }) => {
     return (
-        <div className={cn("flex items-center gap-2", className)}>
+        <div className={cn("flex items-center", className)}>
             <div className="size-8 overflow-hidden">
                 <video
                     src="/video/Bot.mp4"
@@ -13,9 +13,6 @@ export const Logo = ({ className }: { className?: string }) => {
                     className="size-full object-cover scale-150"
                 />
             </div>
-            <span className="font-serif text-xl font-bold tracking-tight text-foreground">
-                ClawOpen
-            </span>
         </div>
     )
 }

@@ -2,12 +2,13 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import Link from 'next/link'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
-import type { Faq } from '@/payload-types'
+import type { FaqsV2 } from '@/payload-types'
+import { RichText } from '@/components/RichText'
 
 export default async function FAQsTwo() {
     const payload = await getPayload({ config })
     const { docs: faqs } = await payload.find({
-        collection: 'faqs',
+        collection: 'faqs_v2',
         limit: 100,
     })
 
@@ -26,14 +27,14 @@ export default async function FAQsTwo() {
                         type="single"
                         collapsible
                         className="bg-card ring-muted w-full rounded-2xl border px-8 py-3 shadow-sm ring-4 dark:ring-0">
-                        {faqs.map((item: Faq, _index: number) => (
+                        {faqs.map((item: FaqsV2, _index: number) => (
                             <AccordionItem
                                 key={item.id}
                                 value={String(item.id)}
                                 className="border-dashed">
                                 <AccordionTrigger className="cursor-pointer text-base hover:no-underline text-left">{item.question}</AccordionTrigger>
-                                <AccordionContent>
-                                    <p className="text-base">{item.answer}</p>
+                                <AccordionContent className="text-muted-foreground">
+                                    <RichText content={item.answer} />
                                 </AccordionContent>
                             </AccordionItem>
                         ))}

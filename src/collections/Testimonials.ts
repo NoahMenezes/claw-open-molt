@@ -2,7 +2,7 @@
 import { CollectionConfig } from 'payload'
 
 export const Testimonials: CollectionConfig = {
-  slug: 'testimonials',
+  slug: 'testimonials_v2',
   admin: {
     useAsTitle: 'name',
     defaultColumns: ['name', 'role', 'company'],
@@ -34,7 +34,7 @@ export const Testimonials: CollectionConfig = {
     },
     {
       name: 'quote',
-      type: 'textarea',
+      type: 'richText',
       required: true,
     },
   ],

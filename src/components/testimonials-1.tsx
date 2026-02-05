@@ -1,13 +1,14 @@
 import Image from 'next/image'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
-import type { Testimonial } from '@/payload-types'
+import type { TestimonialsV2 } from '@/payload-types'
+import { RichText } from '@/components/RichText'
 
 export default async function Testimonials() {
   const payload = await getPayload({ config })
 
   const { docs: testimonials } = await payload.find({
-    collection: 'testimonials',
+    collection: 'testimonials_v2',
     limit: 100,
     depth: 1, // ensure avatar media is populated
   })
@@ -27,7 +28,7 @@ export default async function Testimonials() {
         </div>
 
         <div className="@xl:grid-cols-2 mt-12 grid gap-3">
-          {testimonials.map((testimonial: Testimonial) => {
+          {testimonials.map((testimonial: TestimonialsV2) => {
             const avatar =
               testimonial.avatar && typeof testimonial.avatar === 'object' && 'url' in testimonial.avatar
                 ? testimonial.avatar
@@ -59,9 +60,7 @@ export default async function Testimonials() {
                   </div>
                 </div>
 
-                <p className="text-muted-foreground text-sm">
-                  {testimonial.quote}
-                </p>
+                <RichText content={testimonial.quote} />
               </div>
             )
           })}

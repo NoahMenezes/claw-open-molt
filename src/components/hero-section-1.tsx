@@ -74,14 +74,14 @@ export default function HeroSection() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:mx-0">
+                            <div className="relative aspect-square w-full max-w-[500px] mx-auto lg:mx-0 overflow-hidden">
                                 <video
                                     src="/video/Bot.mp4"
                                     autoPlay
                                     loop
                                     muted
                                     playsInline
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full object-cover scale-105"
                                 />
                             </div>
                         </div>
