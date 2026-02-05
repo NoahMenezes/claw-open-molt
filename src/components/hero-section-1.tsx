@@ -81,9 +81,8 @@ export default function HeroSection() {
                                     loop
                                     muted
                                     playsInline
-                                    className="rounded-3xl shadow-2xl shadow-red-500/20 w-full h-full object-cover"
+                                    className="w-full h-full object-cover"
                                 />
-                                <div className="absolute inset-0 rounded-3xl ring-1 ring-inset ring-foreground/10" />
                             </div>
                         </div>
                     </div>

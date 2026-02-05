@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils'
 export const Logo = ({ className }: { className?: string }) => {
     return (
         <div className={cn("flex items-center gap-2", className)}>
-            <div className="size-8 overflow-hidden rounded-lg bg-red-500/10 shadow-[0_0_15px_rgba(239,68,68,0.3)]">
+            <div className="size-8 overflow-hidden">
                 <video
                     src="/video/Bot.mp4"
                     autoPlay
@@ -22,7 +22,7 @@ export const Logo = ({ className }: { className?: string }) => {
 
 export const LogoIcon = ({ className }: { className?: string }) => {
     return (
-        <div className={cn("size-8 overflow-hidden rounded-lg bg-red-500/10 shadow-[0_0_15px_rgba(239,68,68,0.3)]", className)}>
+        <div className={cn("size-8 overflow-hidden", className)}>
             <video
                 src="/video/Bot.mp4"
                 autoPlay
