@@ -2,7 +2,7 @@
 import { CollectionConfig } from 'payload'
 
 export const FAQs: CollectionConfig = {
-  slug: 'faqs_v2',
+  slug: 'faqs',
   admin: {
     useAsTitle: 'question',
     defaultColumns: ['question'],
