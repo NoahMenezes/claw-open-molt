@@ -8,12 +8,14 @@ import ContentSection from '@/components/content-4'
 import FooterCTA from '@/components/footer-cta'
 import './styles.css';
 import {Header} from '@/components/header'
+import LogoCloud from '@/components/logo-cloud-2'
 
 export default function HomePage() {
   return (
     <div className="home p-0 max-w-none">
       <Header/>
        <HeroSection />
+       <LogoCloud />
        <Testimonials />
        <ProofAndTrust />
        <ContentSection />
