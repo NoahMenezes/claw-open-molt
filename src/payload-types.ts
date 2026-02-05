@@ -70,7 +70,6 @@ export interface Config {
     users: User;
     media: Media;
     testimonials: Testimonial;
-    features: Feature;
     faqs: Faq;
     'payload-kv': PayloadKv;
     'payload-locked-documents': PayloadLockedDocument;
@@ -82,7 +81,6 @@ export interface Config {
     users: UsersSelect<false> | UsersSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     testimonials: TestimonialsSelect<false> | TestimonialsSelect<true>;
-    features: FeaturesSelect<false> | FeaturesSelect<true>;
     faqs: FaqsSelect<false> | FaqsSelect<true>;
     'payload-kv': PayloadKvSelect<false> | PayloadKvSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -181,18 +179,6 @@ export interface Testimonial {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "features".
- */
-export interface Feature {
-  id: number;
-  title: string;
-  description: string;
-  icon?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "faqs".
  */
 export interface Faq {
@@ -237,10 +223,6 @@ export interface PayloadLockedDocument {
     | ({
         relationTo: 'testimonials';
         value: number | Testimonial;
-      } | null)
-    | ({
-        relationTo: 'features';
-        value: number | Feature;
       } | null)
     | ({
         relationTo: 'faqs';
@@ -338,17 +320,6 @@ export interface TestimonialsSelect<T extends boolean = true> {
   company?: T;
   avatar?: T;
   quote?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "features_select".
- */
-export interface FeaturesSelect<T extends boolean = true> {
-  title?: T;
-  description?: T;
-  icon?: T;
   updatedAt?: T;
   createdAt?: T;
 }

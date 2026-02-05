@@ -9,7 +9,6 @@ import 'dotenv/config'
 import { Users } from './collections/Users'
 import { Media } from './collections/Media'
 import { Testimonials } from './collections/Testimonials'
-import { Features } from './collections/Features'
 import { FAQs } from './collections/FAQs'
 
 const filename = fileURLToPath(import.meta.url)
@@ -22,7 +21,7 @@ export default buildConfig({
       baseDir: path.resolve(dirname),
     },
   },
-  collections: [Users, Media, Testimonials, Features, FAQs],
+  collections: [Users, Media, Testimonials, FAQs],
   editor: lexicalEditor(),
   secret: process.env.PAYLOAD_SECRET || '',
   typescript: {

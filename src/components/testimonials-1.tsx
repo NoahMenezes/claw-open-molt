@@ -12,9 +12,7 @@ export default async function Testimonials() {
     depth: 1, // ensure avatar media is populated
   })
 
-  if (!testimonials || testimonials.length === 0) {
-    return null
-  }
+
 
   return (
     <section className="bg-background @container py-24">

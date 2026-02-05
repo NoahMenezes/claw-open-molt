@@ -11,9 +11,7 @@ export default async function FAQsTwo() {
         limit: 100,
     })
 
-    if (!faqs || faqs.length === 0) {
-        return null
-    }
+
 
     return (
         <section className="py-16 md:py-24">
