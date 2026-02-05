@@ -6,11 +6,7 @@ import { Button } from '@/components/ui/button'
 import React from 'react'
 import { cn } from '@/lib/utils'
 
-const menuItems = [
-    { name: 'Features', href: '#link' },
-    { name: 'Pricing', href: '#link' },
-    { name: 'Company', href: '#link' },
-]
+const menuItems: { name: string; href: string }[] = []
 
 export const Header = () => {
     const [menuState, setMenuState] = React.useState(false)
@@ -48,37 +44,10 @@ export const Header = () => {
                         </div>
 
                         <div className="absolute inset-0 m-auto hidden size-fit lg:block">
-                            <ul className="flex gap-1">
-                                {menuItems.map((item, index) => (
-                                    <li key={index}>
-                                        <Button
-                                            asChild
-                                            variant="ghost"
-                                            size="sm">
-                                            <Link
-                                                href={item.href}
-                                                className="text-base">
-                                                <span>{item.name}</span>
-                                            </Link>
-                                        </Button>
-                                    </li>
-                                ))}
-                            </ul>
                         </div>
 
                         <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 rounded-3xl border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
                             <div className="lg:hidden">
-                                <ul className="space-y-6 text-base">
-                                    {menuItems.map((item, index) => (
-                                        <li key={index}>
-                                            <Link
-                                                href={item.href}
-                                                className="text-muted-foreground hover:text-accent-foreground block duration-150">
-                                                <span>{item.name}</span>
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
                             </div>
                         </div>
                     </div>
