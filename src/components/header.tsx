@@ -12,7 +12,7 @@ const menuItems = [
     { name: 'Company', href: '#link' },
 ]
 
-export const HeroHeader = () => {
+export const Header = () => {
     const [menuState, setMenuState] = React.useState(false)
     const [isScrolled, setIsScrolled] = React.useState(false)
 
