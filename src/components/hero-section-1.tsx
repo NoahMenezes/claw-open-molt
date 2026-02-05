@@ -44,7 +44,7 @@ export default function HeroSection() {
                                             animate={{ y: 0, opacity: 1 }}
                                             exit={{ y: -20, opacity: 0 }}
                                             transition={{ duration: 0.5 }}
-                                            className="text-red-500 font-bold block bg-red-500/10 px-4 rounded-lg shadow-[0_0_20px_rgba(239,68,68,0.3)] backdrop-blur-sm"
+                                            className="text-red-500 font-bold block drop-shadow-[0_0_25px_rgba(239,68,68,0.8)]"
                                         >
                                             {words[index]}
                                         </motion.span>
