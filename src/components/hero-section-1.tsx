@@ -44,7 +44,7 @@ export default function HeroSection() {
                                             animate={{ y: 0, opacity: 1 }}
                                             exit={{ y: -20, opacity: 0 }}
                                             transition={{ duration: 0.5 }}
-                                            className="text-primary font-bold block"
+                                            className="text-red-500 font-bold block bg-red-500/10 px-4 rounded-lg shadow-[0_0_20px_rgba(239,68,68,0.3)] backdrop-blur-sm"
                                         >
                                             {words[index]}
                                         </motion.span>
@@ -63,7 +63,7 @@ export default function HeroSection() {
                                     asChild
                                     size="lg"
                                     className="pr-2 pl-4 rounded-full text-lg h-12">
-                                    <Link href="#contact">
+                                    <Link href="https://wa.me/9145336569?text=Hi%20there!%20I%27m%20interested%20in%20your%20services.">
                                         <span className="text-nowrap">Book a Call</span>
                                         <ChevronRight className="ml-2 size-5 opacity-50" />
                                     </Link>

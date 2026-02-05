@@ -36,7 +36,7 @@ export default async function Testimonials() {
             return (
               <div
                 key={testimonial.id}
-                className="bg-card ring-border text-foreground space-y-3 rounded-2xl p-4 text-sm ring-1"
+                className="bg-card ring-border text-foreground space-y-3 rounded-2xl p-4 text-sm ring-1 transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300"
               >
                 <div className="flex gap-3">
                   <div className="relative size-10 shrink-0 overflow-hidden rounded-full before:absolute before:inset-0 before:rounded-full before:border before:border-foreground/10">

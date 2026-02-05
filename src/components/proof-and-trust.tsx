@@ -77,7 +77,7 @@ export default function ProofAndTrust() {
                     ))}
                 </div>
 
-                <Card className="p-8 min-h-[300px] relative overflow-hidden transition-all duration-500">
+                <Card className="p-8 min-h-[300px] relative overflow-hidden transition-all duration-500 transform hover:-translate-y-1 hover:shadow-lg hover:shadow-primary/5">
                     <div className={cn("absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50", tabs[activeTab].borderColor.replace('border-', 'bg-'))} />
                     
                     <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500" key={activeTab}>

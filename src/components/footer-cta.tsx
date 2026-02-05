@@ -10,7 +10,7 @@ export default function FooterCTA() {
         </h2>
         <div className="flex flex-col items-center gap-4">
             <Button asChild size="lg" className="rounded-full px-8 text-lg h-12">
-                <Link href="#contact">Book a Call</Link>
+                <Link href="https://wa.me/9145336569?text=Hi%20there!%20I%27m%20interested%20in%20your%20services.">Book a Call</Link>
             </Button>
             <p className="text-muted-foreground text-lg">
                 Tell us what you want it to do. We’ll recommend the setup and share a quote.

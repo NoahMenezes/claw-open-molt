@@ -38,7 +38,7 @@ export default function Features() {
                 </div>
                 <div className="grid gap-6 md:grid-cols-2">
                     {steps.map((step, index) => (
-                        <Card key={index} className="p-8 space-y-4 hover:bg-secondary/10 transition-colors">
+                        <Card key={index} className="p-8 space-y-4 bg-card hover:bg-secondary/10 transform hover:-translate-y-1 hover:shadow-lg transition-all duration-300">
                             <div className="flex items-center gap-4">
                                 <div className="bg-primary/10 p-3 rounded-lg text-primary">
                                     <step.icon className="size-6" />
