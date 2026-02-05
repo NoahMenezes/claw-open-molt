@@ -2,6 +2,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 import Link from 'next/link'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
+import type { Faq } from '@/payload-types'
 
 export default async function FAQsTwo() {
     const payload = await getPayload({ config })
@@ -27,10 +28,10 @@ export default async function FAQsTwo() {
                         type="single"
                         collapsible
                         className="bg-card ring-muted w-full rounded-2xl border px-8 py-3 shadow-sm ring-4 dark:ring-0">
-                        {faqs.map((item, index) => (
+                        {faqs.map((item: Faq, index: number) => (
                             <AccordionItem
                                 key={item.id}
-                                value={item.id}
+                                value={String(item.id)}
                                 className="border-dashed">
                                 <AccordionTrigger className="cursor-pointer text-base hover:no-underline text-left">{item.question}</AccordionTrigger>
                                 <AccordionContent>
@@ -39,6 +40,7 @@ export default async function FAQsTwo() {
                             </AccordionItem>
                         ))}
                     </Accordion>
+
 
                     <p className="text-muted-foreground mt-6 px-8">
                         Can't find what you're looking for? Contact our{' '}

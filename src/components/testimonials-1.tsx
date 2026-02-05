@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import { getPayload } from 'payload'
 import config from '@/payload.config'
+import type { Testimonial } from '@/payload-types'
 
 export default async function Testimonials() {
     const payload = await getPayload({ config })
@@ -21,7 +22,7 @@ export default async function Testimonials() {
                     <p className="text-muted-foreground text-balance">Hear from the teams and individuals who have transformed their workflow with our platform.</p>
                 </div>
                 <div className="@xl:grid-cols-2 mt-12 grid gap-3">
-                    {testimonials.map((testimonial, index) => (
+                    {testimonials.map((testimonial: Testimonial, index: number) => (
                         <div
                             key={index}
                             className="bg-card ring-border text-foreground space-y-3 rounded-2xl p-4 text-sm ring-1">
