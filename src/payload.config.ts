@@ -11,6 +11,8 @@ import { Media } from './collections/Media'
 import { Testimonials } from './collections/Testimonials'
 import { FAQs } from './collections/FAQs'
 
+import { uploadthingStorage } from '@payloadcms/storage-uploadthing'
+
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
 
@@ -34,5 +36,15 @@ export default buildConfig({
     },
   }),
   sharp,
-  plugins: [],
+  plugins: [
+    uploadthingStorage({
+      collections: {
+        media: true,
+      },
+      options: {
+        token: process.env.UPLOADTHING_TOKEN,
+        acl: 'public-read',
+      },
+    }),
+  ],
 })
