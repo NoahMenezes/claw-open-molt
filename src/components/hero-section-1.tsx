@@ -32,26 +32,25 @@ export default function HeroSection() {
                             />
                         </div>
                         <div className="relative z-10 mx-auto w-full max-w-5xl px-6">
-                            <div className="mx-auto max-w-2xl text-center">
-                                <h1 className="text-balance font-serif text-4xl font-medium sm:text-5xl">Get a Virtual Employee with<br /> Moltbot • OpenClaw • Clawdbot</h1>
-                                <p className="text-muted-foreground mt-4 text-balance">We host it. We connect it. We keep it running.<br /> Your virtual employee: VM hosted, channels connected, top skills enabled, monitored.<br /> No lock-in. Bring your own AI keys.</p>
+                            <div className="mx-auto max-w-md text-center">
+                                <h1 className="text-balance font-serif text-4xl font-medium sm:text-5xl">Ship faster. Integrate smarter.</h1>
+                                <p className="text-muted-foreground mt-4 text-balance">Veil is your all-in-one engine for adding seamless integrations to your app.</p>
 
                                 <Button
                                     asChild
-                                    className="mt-6 pr-1.5 cursor-pointer">
-                                    <Link href="#book-call">
-                                        <span className="text-nowrap">Book a Call</span>
+                                    className="mt-6 pr-1.5">
+                                    <Link href="#link">
+                                        <span className="text-nowrap">Start Building</span>
                                         <ChevronRight className="opacity-50" />
                                     </Link>
                                 </Button>
-                                <p className="text-xs text-muted-foreground mt-2">Tell us what you want it to do. We’ll recommend a setup and share a quote.</p>
                             </div>
                             <div className="mx-auto mt-24 max-w-xl">
                                 <div className="**:fill-foreground grid scale-95 grid-cols-3 gap-12">
                                     <div className="ml-auto blur-[2px]">
                                         <Card className="shadow-foreground/10 flex h-8 w-fit items-center gap-2 rounded-xl px-3 sm:h-10 sm:px-4">
                                             <Supabase className="size-4" />
-                                            <span className="text-nowrap font-medium max-sm:text-xs">Telegram</span>
+                                            <span className="text-nowrap font-medium max-sm:text-xs">Supabase</span>
                                         </Card>
                                     </div>
                                     <div className="ml-auto">
@@ -63,25 +62,25 @@ export default function HeroSection() {
                                     <div className="ml-auto blur-[2px]">
                                         <Card className="shadow-foreground/10 flex h-8 w-fit items-center gap-2 rounded-xl px-3 sm:h-10 sm:px-4">
                                             <Figma className="size-4" />
-                                            <span className="text-nowrap font-medium max-sm:text-xs">WhatsApp</span>
+                                            <span className="text-nowrap font-medium max-sm:text-xs">Figma</span>
                                         </Card>
                                     </div>
                                     <div className="mr-auto">
                                         <Card className="shadow-foreground/10 flex h-8 w-fit items-center gap-2 rounded-xl px-3 sm:h-10 sm:px-4">
                                             <Vercel className="size-4" />
-                                            <span className="text-nowrap font-medium max-sm:text-xs">Discord</span>
+                                            <span className="text-nowrap font-medium max-sm:text-xs">Vercel</span>
                                         </Card>
                                     </div>
                                     <div className="blur-[2px]">
                                         <Card className="shadow-foreground/10 flex h-8 w-fit items-center gap-2 rounded-xl px-3 sm:h-10 sm:px-4">
                                             <Firebase className="size-3 sm:size-4" />
-                                            <span className="text-nowrap font-medium max-sm:text-xs">Webhooks</span>
+                                            <span className="text-nowrap font-medium max-sm:text-xs">Firebase</span>
                                         </Card>
                                     </div>
                                     <div>
                                         <Card className="shadow-foreground/10 mx-a flex h-10 h-8 w-fit items-center gap-2 rounded-xl px-3 sm:h-10 sm:px-4">
                                             <Linear className="size-3 sm:size-4" />
-                                            <span className="text-nowrap font-medium max-sm:text-xs">Custom</span>
+                                            <span className="text-nowrap font-medium max-sm:text-xs">Linear</span>
                                         </Card>
                                     </div>
                                     <div className="ml-auto blur-[2px]">
@@ -99,7 +98,7 @@ export default function HeroSection() {
                                     <div className="blur-[2px]">
                                         <Card className="shadow-foreground/10 flex h-8 w-fit items-center gap-2 rounded-xl px-3 sm:h-10 sm:px-4">
                                             <Clerk className="size-3 sm:size-4" />
-                                            <span className="text-nowrap font-medium max-sm:text-xs">Moltbot</span>
+                                            <span className="text-nowrap font-medium max-sm:text-xs">Clerk </span>
                                         </Card>
                                     </div>
                                 </div>

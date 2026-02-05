@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+
+:root {
+  --font-mono: 'Roboto Mono', monospace;
+  --radius: 0.625rem;
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  /* ... other variables ... */
+}
+
+.dark {
+  --background: oklch(1 0 0); /* Force white background in dark mode too */
+  --foreground: oklch(0.145 0 0); /* Keep dark text for contrast on white bg */
+  /* ... other variables ... */
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
